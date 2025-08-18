@@ -1,7 +1,7 @@
 import "../App.css";
 
 export default function Navbar({ active, onChange }) {
-  const items = ["about", "resume", "projects", "portfolio", "contact"];
+  const items = ["about", "resume", "projects", "portfolio"];
   return (
     <nav className="navbar">
       {items.map((id) => (

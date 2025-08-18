@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import SectionWrapper from "./components/SectionWrapper";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import Resume from "./components/resume";
 import Portfolio from "./components/portofolio";
 
@@ -14,7 +13,6 @@ const sections = {
   resume: <Resume />,
   projects: <Projects />,
   portfolio: <Portfolio />, 
-  contact: <Contact />,  
 };
 
 export default function App() {

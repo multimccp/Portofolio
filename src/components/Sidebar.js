@@ -12,17 +12,23 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <img src={avatar} alt="avatar" className="avatar" />
-      <h1 className="name">Miguel Campos</h1>
-      <p className="tagline">Full-stack Developer</p>
+      <h1 className="name"> <code>&lt; Miguel Campos /&gt;</code></h1>
+      <p className="tagline"><code>&lt; Full-Stack Developer /&gt;</code></p>
 
       {/* Contact Info Section */}
       <div className="contact-info">
-        <div>
-          <FontAwesomeIcon icon={faEnvelope} /> <span>miguelccp@gmail.com</span>
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faPhone} /> <span>+351 919562259</span>
-        </div>
+          <code>
+            <span className="const">const</span> <span className="contact">contacts</span>() = {'{ '}
+            <div className="contact-item">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span> miguelccp@gmail.com</span>
+            </div>
+            <div className="contact-item" >
+              <FontAwesomeIcon icon={faPhone} />
+              <span> +351 919562259</span>
+            </div>
+            {' }'}
+          </code>
       </div>
 
       {/* Separator Line */}
@@ -36,7 +42,7 @@ export default function Sidebar() {
         <a href="https://www.linkedin.com/in/miguel-campos-358965b4/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} /> 
         </a>
-        <a href="https://www.instagram.com/miguelcampos00/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/miguelcamposcarphotography/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} /> 
         </a>
         <a href="https://www.facebook.com/miguelccp/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">

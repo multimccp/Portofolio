@@ -30,6 +30,11 @@ const whatIDo = [
 
 const testimonials = [
   {
+    name: "Boris Teixeira",
+    position: "ASIC Digital Design, Sr Engineer at Synopsys .inc",
+    testimonial: "Miguel is an extremely dedicated and hardworking person. Committed to everything he does, he is the kind of professional you can fully trust. Working with him means precision, responsibility, and team spirit.",
+  },
+  {
     name: "Filipe Miranda",
     position: "Student in master's degree in electronic engineering at University of Aveiro",
     testimonial: "Worked with Miguel in multiple projects, he's earnest, has good communication and always with great ideas. Definitely a great professional",
