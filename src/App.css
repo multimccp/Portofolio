@@ -1,0 +1,398 @@
+/* -------------------------------------------------
+   RESET & BASE
+--------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #fbf5ee;
+}
+
+/* Light Mode */
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.navbar {
+  background-color: #1c1c1e; /* Dark background for navbar */
+}
+
+body.light .navbar {
+  background-color: #fff; /* Light background for navbar */
+}
+
+/* Add other light mode overrides here */
+body.light .nav-btn {
+  color: #333;
+}
+
+body.light .nav-btn.active {
+  color: #7eb2dd;
+}
+
+body.light .nav-btn:hover {
+  color: #000;
+}
+
+/* Theme Toggle Button */
+.nav-btn.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.nav-btn.theme-toggle:hover {
+  color: #fff;
+}
+
+/* -------------------------------------------------
+   GRID LAYOUT
+--------------------------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+
+  /* Wider margin around the whole page + bigger gap */
+  padding: 40px;
+  gap: 40px;
+}
+
+/* -------------------------------------------------
+   SIDEBAR (LEFT COLUMN)
+--------------------------------------------------*/
+.sidebar {
+  background-color: #1c1c1e;
+  border-radius: 24px;          /* rounder */
+  padding: 2.5rem 1.5rem;       /* roomier */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: #aaa;
+  background-color: #2a2a2c;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  
+  width: 100%;
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 1.5rem; /* Add spacing between contact info and separator */
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+.contact-info div:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar separator line */
+.sidebar-separator {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1.5rem 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;      /* Adds space above the icons */
+}
+
+.social a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;       /* Adjust font size for better visibility */
+  transition: color 0.2s;
+  width: 40px;          /* Fixed width to maintain consistent icon size */
+  text-align: center;    /* Ensures text is centered under icons */
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+/* -------------------------------------------------
+   MAIN COLUMN (RIGHT SIDE)
+--------------------------------------------------*/
+.main-column {
+  background-color: #1c1c1e;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 0 10px #00000050;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------
+   NAVBAR
+--------------------------------------------------*/
+.navbar {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.75rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #aaa;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-btn.active::after,
+.nav-btn:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #7eb2dd;   /* yellow accent */
+}
+
+/* -------------------------------------------------
+   SECTION CONTAINER (animated wrapper)
+--------------------------------------------------*/
+.section-container {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* -------------------------------------------------
+   TYPOGRAPHY INSIDE SECTIONS
+--------------------------------------------------*/
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------
+   CARD GRID ( “What I’m Doing” )
+--------------------------------------------------*/
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Adjusted grid layout */
+}
+
+.card {
+  background-color: #2a2a2c;
+  padding: 1rem;
+  border-radius: 24px;
+  box-shadow: 0 0 10px #00000030;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #7eb2dd;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+/* -------------------------------------------------
+   SKILLS SECTION (Progress Bars)
+--------------------------------------------------*/
+.skills {
+  margin-top: 2rem;
+}
+
+.skill-bar {
+  margin-bottom: 1rem;
+}
+
+.skill-bar label {
+  display: block;
+  font-size: 1rem;
+  color: #7eb2dd;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #7eb2dd;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* -------------------------------------------------
+   Portofolio
+--------------------------------------------------*/
+
+.portfolio {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.portfolio-item {
+  width: calc(100% / 6 - 1rem); /* 6 images per row */
+  height: 200px; /* Fixed height for images */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-color: #2a2a2c;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%; /* Stretch images to fill the container */
+  object-fit: cover; /* Ensure images fill the container */
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #7eb2dd;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #5a8eb2;
+}
+
+
+/* -------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------*/
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;      /* stack columns */
+    padding: 24px;                   /* slightly smaller margin mobile */
+    gap: 24px;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 24px;
+  }
+}
