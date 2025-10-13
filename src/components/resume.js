@@ -49,7 +49,7 @@ export default function Resume() {
         <h3>Education</h3>
         <ul>
           <li>
-            <strong>Bachelor in Multimedia and Communication Technologies</strong> <em>University of Aveiro</em> - Completed
+            <strong>Multimedia and Communication Technologies </strong> <em>University of Aveiro</em> - Completed
           </li>
           <li>
             <strong>Electronic Engineering (3 years) </strong> <em>University of Aveiro</em> - Completed 3 years of study
