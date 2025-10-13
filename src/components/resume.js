@@ -5,21 +5,25 @@ const skills = [
   { skill: "Node.js", level: 45 },
   { skill: "JavaScript", level: 90 },
   { skill: "HTML & CSS", level: 80 },
+  { skill: "BootStrap", level: 80 },
   { skill: "C", level: 60 },
   { skill: "C++", level: 55 },
   { skill: "C#", level: 80 },
   { skill: "PHP", level: 70 },
   { skill: "Java", level: 60 },
+  { skill: "Python", level: 65 },
+  { skill: "Flask", level: 55 },
   { skill: "Assembly", level: 15 },
   { skill: "Linux", level: 30 },
 ];
 
 const tools = [
   { tool: "VS Code", level: 80, logo: "/images/logos/Visual_Studio_Code.webp" },
+  { tool: "PyCharm", level: 65, logo: "" },
   { tool: "Figma", level: 70, logo: "/images/logos/Figma.webp" },
   { tool: "MySQL Workbench", level: 50, logo: "/images/logos/mysqlworkbench.webp" },
   { tool: "Github", level: 40, logo: "/images/logos/github.png" },
-  { tool: "Unity", level: 80, logo: "/images/logos/unity.webp" },
+  { tool: "Unity", level: 80, logo: "/images/logos/Unity.webp" },
   { tool: "Blender", level: 67, logo: "/images/logos/blender.webp" },
   { tool: "PHPMyAdmin", level: 65, logo: "/images/logos/PhpMyAdmin.png" },
   { tool: "GNS3", level: 55, logo: "/images/logos/gns3.png" },
@@ -45,13 +49,16 @@ export default function Resume() {
         <h3>Education</h3>
         <ul>
           <li>
-            <strong>Multimedia and Communication Technologies </strong> <em>University of Aveiro</em> - Currently enrolled
+            <strong>Multimedia and Communication Technologies </strong> <em>University of Aveiro</em> - Completed
           </li>
           <li>
             <strong>Electronic Engineering (3 years) </strong> <em>University of Aveiro</em> - Completed 3 years of study
           </li>
           <li>
             <strong>Complete C# Unity Game Developer 2D</strong>  <em>Udemy</em> - Completed the course to learn Unity game development, focusing on C# and 2D game creation.
+          </li>
+          <li>
+            <strong>100 Days of Code: The Complete Python Pro Bootcamp</strong>  <em>Udemy</em> - Completed a course focused on automation, web development (Flask), APIs, data handling, and object-oriented programming.
           </li>
         </ul>
       </section>
@@ -99,7 +106,7 @@ export default function Resume() {
           {tools.map(({ tool, level, logo }) => (
             <div className="card" key={tool}>
               <div className="card-logo">
-                <img src={logo} alt={tool} />
+                <img src={`${process.env.PUBLIC_URL}${logo}`} alt={tool} />
               </div>
               <h3>{tool}</h3>
               <div className="progress-bar">

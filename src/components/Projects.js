@@ -85,7 +85,7 @@ const Projects = () => {
               onClick={() => handleCardClick(project)}
             >
               <div className="image-container">
-                <img src={project.image} alt={project.title} />
+                <img src={`${process.env.PUBLIC_URL}${project.image}`} alt={project.title} />
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>

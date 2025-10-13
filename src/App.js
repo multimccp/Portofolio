@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -17,6 +17,16 @@ const sections = {
 
 export default function App() {
   const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    const titles = {
+      about: "About — Miguel Campos",
+      resume: "Resume — Miguel Campos",
+      projects: "Projects — Miguel Campos",
+      portfolio: "Portfolio — Miguel Campos",
+    };
+    document.title = titles[active] || "Miguel Campos";
+  }, [active]);
 
   return (
     <div className="grid-container">
