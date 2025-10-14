@@ -373,7 +373,6 @@ button:hover {
   display: flex;
   justify-content: space-between; /* Aligns the cards in a row */
   gap: 0px; /* Removes space between cards */
-  margin-top: 40px;
   flex-wrap: wrap; /* Allows the cards to wrap to the next line if needed */
 }
 
@@ -584,6 +583,7 @@ projects
 }
 
 .project-details {
+  width: 100%;
   background-color: #2a2a2c;
   padding: 2rem;
   border-radius: 24px;
