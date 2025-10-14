@@ -23,16 +23,6 @@ const Projects = () => {
               <li><strong>video</strong> - View review videos about the model grid view.</li>
               <li><strong>Backend Integration</strong> - Built with **Node.js** and **MySQL** for full-stack management of car data.</li>
             </ul>
-        <h3>Project Screenshots/h3>
-        <div class="project-images">          
-          <img src="/images/carjockey/layout search.png" alt="Code Screenshot 2" class="project-image" />
-          <img src="/images/carjockey/layout mobile homepage.png" alt="Interface Screenshot 1" class="project-image" />
-        </div>
-        <h3>Project code</h3>
-        <div class="project-images">      
-          <img src="/images/carjockey/index,js backend.png" alt="Code Screenshot 1" class="project-image"/>
-          <img src="/images/carjockey/search,js.png" alt="Interface Screenshot 2" class="project-image"/>          
-        </div>
       </div>
       `
     },
@@ -53,10 +43,6 @@ const Projects = () => {
               <li><strong>Filter & Sort</strong> - Cars can be filtered by attributes such as brand, model, and condition.</li>
               <li><strong>Backend Integration</strong> - Built with **Node.js** and **MySQL** for full-stack management of car data.</li>
             </ul>
-          </div>
-          <div class="project-images">
-            <img src="/images/dieCast/Screenshot 2025-05-23 162605.png" alt="Diecast Cars"/>
-            <img src="/images/dieCast/Screenshot 2025-05-23 162627.png" alt="App Interface" />
           </div>
         </div>
       `,

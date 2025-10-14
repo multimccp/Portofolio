@@ -19,7 +19,7 @@ const skills = [
 
 const tools = [
   { tool: "VS Code", level: 80, logo: "/images/logos/Visual_Studio_Code.webp" },
-  { tool: "PyCharm", level: 65, logo: "" },
+  { tool: "PyCharm", level: 65, logo: "/images/logos/PyCharm.png" },
   { tool: "Figma", level: 70, logo: "/images/logos/Figma.webp" },
   { tool: "MySQL Workbench", level: 50, logo: "/images/logos/mysqlworkbench.webp" },
   { tool: "Github", level: 40, logo: "/images/logos/github.png" },
