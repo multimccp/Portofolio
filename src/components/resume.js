@@ -69,7 +69,7 @@ export default function Resume() {
           <li><strong>Aveiro Jovem Criador</strong> - First Prize and Honors in Photography for 3 consecutive years (2018, 2019, 2020).</li>
           <li><strong>Magazine Txi</strong> - Article about me.</li>
           <li><strong>Photography Exhibitions</strong> - <em>Café Concerto</em> and <em>Centro de Interpretativo da Cogula</em>.</li>
-          <li><strong>karate</strong> - Red Belt.</li>
+          <li><strong>Karate</strong> - Red Belt.</li>
           <li><strong>MID - Made In Deca</strong> - First Prize in Sound (2024).</li>
         </ul>
       </section>

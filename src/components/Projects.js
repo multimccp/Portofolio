@@ -33,17 +33,15 @@ const Projects = () => {
       image: "/images/dieCast/Screenshot 2025-05-23 162627.png",
       details:  `
         <div class="project-description">
-          <div class="project-content">
-            <h3>Diecast Car Collection Project</h3>
-            <p>This project lets you manage and display a collection of diecast cars. Users can add, view, update, and delete cars in their collection. The application is built with a **React** frontend and an **Express** backend, using a **MySQL** database to store car data.</p>
-            <h4>Key Features:</h4>
-            <ul>
-              <li><strong>Add Cars</strong> - Users can add new diecast cars with details like model, brand, color, year, and more.</li>
-              <li><strong>View and Manage</strong> - View cars in a list or grid view. Edit and delete entries easily.</li>
-              <li><strong>Filter & Sort</strong> - Cars can be filtered by attributes such as brand, model, and condition.</li>
-              <li><strong>Backend Integration</strong> - Built with **Node.js** and **MySQL** for full-stack management of car data.</li>
-            </ul>
-          </div>
+          <h3>Diecast Car Collection Project</h3>
+          <p>This project lets you manage and display a collection of diecast cars. Users can add, view, update, and delete cars in their collection. The application is built with a **React** frontend and an **Express** backend, using a **MySQL** database to store car data.</p>
+          <h4>Key Features:</h4>
+          <ul>
+            <li><strong>Add Cars</strong> - Users can add new diecast cars with details like model, brand, color, year, and more.</li>
+            <li><strong>View and Manage</strong> - View cars in a list or grid view. Edit and delete entries easily.</li>
+            <li><strong>Filter & Sort</strong> - Cars can be filtered by attributes such as brand, model, and condition.</li>
+            <li><strong>Backend Integration</strong> - Built with **Node.js** and **MySQL** for full-stack management of car data.</li>
+          </ul>
         </div>
       `,
     },
