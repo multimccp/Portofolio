@@ -58,7 +58,7 @@ const Projects = () => {
           <p>
             Top-down pixel-art adventure set in a city where Mr. João sets out to complete
             a photo album left by his late wife. Explore, talk to people, and play a
-            collection of minigames while the project continues development. :contentReference[oaicite:0]{index=0}
+            collection of minigames while the project continues development.{index=0}
           </p>
 
           <h4>Key Features:</h4>
