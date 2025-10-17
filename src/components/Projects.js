@@ -63,12 +63,11 @@ const Projects = () => {
 
           <h4>Key Features:</h4>
           <ul>
-            <li><strong>Story Hook</strong> — Help Mr. João finish a cherished photo album. :contentReference[oaicite:1]{index=1}</li>
-            <li><strong>Explore & Interact</strong> — Roam the city, chat with NPCs, and discover short minigames. :contentReference[oaicite:2]{index=2}</li>
-            <li><strong>Pixel-Art, Top-Down</strong> — Cozy visual style with a classic overhead perspective. :contentReference[oaicite:3]{index=3}</li>
-            <li><strong>Platform</strong> — Windows (downloadable demo, ~57 MB). :contentReference[oaicite:4]{index=4}</li>
-            <li><strong>Status & Language</strong> — Prototype; Portuguese (Portugal). :contentReference[oaicite:5]{index=5}</li>
-            <li><strong>Team</strong> — Miguel Tavares (art & music), Miguel Campos (programming), Bernardo Silva (music & programming). :contentReference[oaicite:6]{index=6}</li>
+            <li><strong>Story Hook</strong> — Help Mr. João finish a cherished photo album.</li>
+            <li><strong>Explore & Interact</strong> — Roam the city, chat with NPCs, and discover short minigames. </li>
+            <li><strong>Pixel-Art, Top-Down</strong> — Cozy visual style with a classic overhead perspective. </li>
+            <li><strong>Platform</strong> — Windows (downloadable demo, ~57 MB). </li>
+            <li><strong>Status & Language</strong> — Prototype; Portuguese (Portugal). </li>
           </ul>
         </div>
       `,
