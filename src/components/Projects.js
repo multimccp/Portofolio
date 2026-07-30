@@ -261,33 +261,45 @@ const Projects = () => {
     {
       id: 7,
       title: "MangaShelf",
-      description: "Self-hosted manga & comic library manager and reader",
-      image: "/images/mangashelf/home.png",
+      description: "Self-hosted manga library that browses, reads, and imports new series",
+      image: "/images/mangashelf/banner.png",
       details: `
         <div class="project-description">
           <h4>MangaShelf — Self-Hosted Manga & Comic Library</h4>
           <p>
-            MangaShelf scans folders of manga and comics into a searchable, taggable library you can browse and read from any device on your home network — or, over <strong>Tailscale</strong>, from anywhere. I had thousands of comic folders on disk with no good way to browse them, track progress, or read on my phone, and existing tools didn't handle a library at this scale without a cloud service, so I built my own.
+            A self-hosted web app that turns folders of manga/comics on disk into a searchable, taggable library you can browse, read and expand from any device — with a pluggable system for importing new series from online sources. I had thousands of comic folders on disk with no good way to browse them, track progress or read on my phone, and existing tools either didn't handle a library at this scale or required pushing my collection to a cloud service — so I built my own, running entirely on my own machine and network. It grew from a local viewer into a tool that can also <em>find and import</em> series it doesn't have yet.
           </p>
 
           <h4>What I Built</h4>
           <ul>
-            <li><strong>FastAPI web app on a SQLite core</strong> — a single <strong>FastAPI</strong> backend drives a SQLite database and disk scanner, keeping metadata and reading progress in sync across every device.</li>
-            <li><strong>Faceted library</strong> — search and filter across genres, tags, authors, series, language and status; ratings, favorites, per-series metadata and custom cover uploads.</li>
-            <li><strong>In-browser reader</strong> — vertical and right-to-left (manga) reading modes, per-page progress tracking, chapter navigation and split-chapter editing.</li>
-            <li><strong>Disk scanner</strong> — treats folders of images as chapters, auto-resolves covers, supports PDFs, and runs background rescans; libraries detect when their drive is offline.</li>
-            <li><strong>Read from anywhere on the LAN</strong> — React is vendored locally so the reader works on a phone with no internet; optional password gate with per-device "remember me" tokens.</li>
+            <li><strong>Full-stack self-hosted app</strong> — a FastAPI (Python) backend serving a React frontend, reading a SQLite database and the raw image folders on disk.</li>
+            <li><strong>Faceted library</strong> — search and filter across genres, tags, authors, series, language and status; ratings, favorites, per-series metadata editing and custom cover upload.</li>
+            <li><strong>In-browser reader</strong> — vertical and right-to-left (manga) reading modes, per-page progress tracking, chapter navigation and split-chapter-here editing.</li>
+            <li><strong>Disk scanner</strong> — treats folders of images as chapters, auto-resolves covers, supports PDFs, runs background rescans and detects when a library's drive goes offline.</li>
+            <li><strong>Pluggable import sources</strong> — a source-adapter architecture pulls new series from online catalogs (MangaDex; AniList for English-first search handing off to MangaDex). Extensible three ways: safe <strong>declarative JSON extensions</strong> (interpreted, never executed), private git-ignored Python adapters, and a generic <strong>AI fallback</strong> that reads an arbitrary site when a local LLM is running.</li>
+            <li><strong>Search the web to import</strong> — one search bar queries every source concurrently, ranks results across sources, and annotates each with its readable chapter count so you can tell "1 chapter" from "124" before importing.</li>
+            <li><strong>Read-before-import preview</strong> — stream any chapter live (proxied through the server) to preview a series before committing it to disk; nothing downloads until you import.</li>
+            <li><strong>Resilient import queue</strong> — imports run server-side and persist across restarts, so an import started on a phone survives closing the tab and shows up on any device.</li>
+            <li><strong>Read from anywhere</strong> — the frontend ships as a precompiled, self-contained bundle so the reader works on a phone with no internet; served over Tailscale (private tailnet only), gated by an optional password with per-device "remember me" tokens.</li>
             <li><strong>Multi-library support</strong> — separate libraries with independent scan paths and a quick switcher.</li>
           </ul>
 
-          <h4>Why It Stands Out</h4>
+          <h4>Notable</h4>
           <ul>
-            <li><strong>Clean architecture</strong> — one SQLite DB and a dedicated scanner module cleanly separated from the API and frontend layers.</li>
-            <li><strong>Real scale</strong> — manages a live library of <strong>3,400+ series</strong> with faceted search and background rescans that stay responsive.</li>
+            <li><strong>Scale</strong> — manages a real library of <strong>3,400+ series</strong> with faceted search and background rescans that stay responsive.</li>
+            <li><strong>Safe, shareable extensibility</strong> — the declarative extension system adds new manga sites via a JSON manifest the engine <em>interprets</em>; it can never execute arbitrary code, so extensions are safe to share in a multi-user deployment, unlike a plugin system that runs untrusted Python.</li>
+            <li><strong>Cross-source, cross-device import pipeline</strong> — searches all sources concurrently under a deadline, dedupes only true duplicates (never collapsing a 1-chapter stub over a 124-chapter full run), and persists the download queue so imports survive restarts and follow you across devices.</li>
+            <li><strong>Safe concurrent DB access</strong> — the scanner/DB core was single-threaded, so the web layer reopens SQLite with <code>check_same_thread=False</code> behind a lock to stay safe under FastAPI's threadpool without forking the core logic.</li>
+            <li><strong>Security-conscious serving</strong> — path-sandboxed image endpoints (every file must live inside a configured library root), a fail-closed SSRF guard on the page-proxy, size caps on outbound fetches, and token-gated access unreachable outside the private tailnet.</li>
           </ul>
 
           <h4>Tech Stack</h4>
-          <p>Python 3, FastAPI, Uvicorn, Pydantic, SQLite, React (JSX compiled in-browser via Babel), Pillow, PDF support. I designed the entire UI myself and built the whole thing — backend, reader and scanner — with coding agents assisting during implementation. Currently running for my own daily use (self-hosted, not publicly deployed).</p>
+          <p>
+            Python 3, FastAPI, Uvicorn, Pydantic, SQLite, Pillow, PDF support, Playwright (headless-browser scraping for the AI/private adapters). Frontend: React authored in JSX, precompiled to a single minified bundle with <strong>esbuild</strong> (cache-busted via a version token) — no in-browser transpilation, no external CDN dependency. Runs on Windows; exposed to other devices over a <strong>Tailscale</strong> private network.
+          </p>
+          <p>
+            Solo, AI-assisted — I designed the architecture and built the whole thing (backend API, SQLite schema and migrations, disk scanner, the source-adapter/extension system, and the React reader/library frontend) using coding agents during implementation and Claude for the initial UI direction. Personal / self-hosted, running for my own daily use over my tailnet. Open-source on <a href="https://github.com/multimccp00/MangaShelf" target="_blank" rel="noopener noreferrer">GitHub</a> — the committed codebase deliberately ships only API-based, non-piracy sources.
+          </p>
 
           <div class="project-images">
             <img src="%PUBLIC_URL%/images/mangashelf/home.png" alt="MangaShelf library home with Continue Reading shelf" />
