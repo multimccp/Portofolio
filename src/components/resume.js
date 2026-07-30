@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 
 const skills = [
+  { skill: "Python", level: 90 },
+  { skill: "Generative AI", level: 85 },
+  { skill: "Local LLMs / Ollama", level: 85 },
+  { skill: "Prompt Engineering", level: 85 },
+  { skill: "PyTorch", level: 60 },
+  { skill: "MCP", level: 70 },
+  { skill: "JavaScript", level: 95 },
   { skill: "React", level: 75 },
   { skill: "Node.js", level: 55 },
-  { skill: "JavaScript", level: 95 },
   { skill: "HTML & CSS", level: 90 },
-  { skill: "BootStrap", level: 80 },
   { skill: "C#", level: 80 },
   { skill: "PHP", level: 85 },
-  { skill: "Java", level: 50 },
-  { skill: "Python", level: 65 },
-  { skill: "Flask", level: 55 },
-  { skill: "Linux", level: 15 },
 ];
 
 const tools = [
