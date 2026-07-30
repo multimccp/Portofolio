@@ -78,7 +78,7 @@ export default function Resume() {
         <h3>Experience</h3>
         <ul>
           <li>
-            <strong>Software Engineer at Kaizen Institute</strong> <em>(official title: Web Developer)</em> - <em>2025 – Present</em>
+            <strong>Software Engineer at Kaizen Institute</strong> <em>(official title: Web Developer)</em> - <em>2026 – Present</em>
             <ul>
               <li>Developed backend functionality and production web features for the company website (WordPress, PHP, Docker).</li>
               <li>Improved website performance, Core Web Vitals and technical SEO.</li>
