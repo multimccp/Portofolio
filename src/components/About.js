@@ -61,7 +61,7 @@ export default function About() {
     <section>
       <h2>About Me</h2>
       <p>
-        I'm a Multimedia and Communication Technologies graduate from the University of Aveiro, Portugal, working in web development. I recently built and shipped a company's new website at Kaizen Institute — using WordPress, PHP and Docker — where I also led the company's AI initiatives and single-handedly built an internal AI assistant web app. More than just building functional websites, I’m driven by the challenge of creating digital experiences that truly stand out — through design, interactivity, and the unique ways they express ideas.
+        I'm a Software Engineer with professional experience building production web applications and AI-powered software. At Kaizen Institute I shipped production web features and, from scratch, designed and built <strong>Personae</strong> — a privacy-first AI workspace that was later adopted internally to support the company's AI workflows. I work across Python, backend systems, generative AI / local LLMs, and full-stack engineering (React, Node.js, C#). What drives me is turning emerging AI technologies into practical, useful products — not just functional websites, but experiences that stand out.
       </p>
       <p>I believe the best way to learn is by doing. I work with complete focus: I don’t leave things unfinished, I like solving problems on my own, and I see every project as a real opportunity to grow. What drives me is innovation — creating technological solutions that are useful, expressive, and meaningful.</p>
       <p>My personal mantra: <b>"Build with purpose. Play with heart. Code for impact."</b></p>

@@ -76,7 +76,17 @@ export default function Resume() {
       <section>
         <h3>Experience</h3>
         <ul>
-          <li><strong>Junior Web Developer at Kaizen Institute</strong> - <em>2025</em> - Hired to design and build the company's new corporate website using WordPress, PHP and Docker, delivering it to production. Also oversaw the company's AI initiatives (primarily Claude-based) and single-handedly built an internal AI web app featuring assistants for translation, document handling, company-knowledge search, and marketing support.</li>
+          <li>
+            <strong>Software Engineer at Kaizen Institute</strong> <em>(official title: Web Developer)</em> - <em>2025 – Present</em>
+            <ul>
+              <li>Developed backend functionality and production web features for the company website (WordPress, PHP, Docker).</li>
+              <li>Improved website performance, Core Web Vitals and technical SEO.</li>
+              <li>Built reusable deployment workflows and engineering utilities.</li>
+              <li>Introduced AI-assisted software development using Claude Code.</li>
+              <li>Evaluated technical solutions and influenced engineering decisions.</li>
+              <li>Conceived and built <strong>Personae</strong>, a privacy-first AI workspace later adopted internally to support the company's AI workflows.</li>
+            </ul>
+          </li>
           <li> <strong>Part-Time Worker at Worten </strong> - <em> Aveiro, 2022 </em> - Worked part-time at Worten, gaining valuable customer service experience, managing inventory, and assisting in the sales process.</li>
           <li><strong>Handball Referee</strong> - Certified handball referee with experience at various levels.</li>
           <li><strong>Karate</strong> - Volunteered in a non-licensed capacity, acting as a senior student (senpai) to assist in classes teaching other students</li>          

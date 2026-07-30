@@ -23,7 +23,7 @@ export default function Sidebar() {
             <span className="kw">class</span> <span className="classname">MiguelCampos</span> {'{'}
           </div>
           <div className="prop-line">
-            <span className="prop">role</span> = <span className="str">"Full-Stack &amp; AI Developer"</span>
+            <span className="prop">role</span> = <span className="str">"Software Engineer · AI &amp; Full-Stack"</span>
           </div>
           <div className="prop-line">
             <span className="prop">location</span> = <span className="str">"Aveiro, Portugal"</span>

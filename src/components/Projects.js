@@ -46,7 +46,7 @@ const Projects = () => {
             <strong>Runtime:</strong> local Windows app with a PowerShell/.bat launcher and winget installer; optional remote access over Tailscale.
           </p>
           <p>
-            Solo developer — sole author. I built the assistant/persona system, the pt-PT translator pipeline and its critic/fidelity gate, the deterministic termbase enforcement, the memory pipeline, the file-based state store, the backend security hardening, the tests and the Windows installer. Pilot stage — functional, actively developed, and in real use at the workplace where it was deployed (per-machine local install, not a hosted service). Source on <a href="https://github.com/multimccp00/personae-workspace" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            Solo developer — sole author. I built the assistant/persona system, the pt-PT translator pipeline and its critic/fidelity gate, the deterministic termbase enforcement, the memory pipeline, the file-based state store, the backend security hardening, the tests and the Windows installer. Functional and actively developed — <strong>adopted internally at Kaizen Institute</strong> to support the company's AI workflows (per-machine local install, not a hosted service). Source on <a href="https://github.com/multimccp00/personae-workspace" target="_blank" rel="noopener noreferrer">GitHub</a>.
           </p>
 
           <div class="project-images">
@@ -196,7 +196,7 @@ const Projects = () => {
       details: `<div class="project-description">
           <h4>EcoScan – Sustainable Shopping Web App</h4>
           <p>
-            EcoScan is a full-featured web application designed to encourage sustainable shopping and responsible consumption. Built with <strong>PHP, JavaScript, and MySQL</strong>, it empowers users to manage shopping lists, track purchases, and earn badges for eco-friendly actions—all within a modern, mobile-friendly interface.
+            EcoScan is a full-featured web application, developed in collaboration with the <strong>Municipality of Ílhavo</strong>, designed to encourage sustainable shopping and responsible consumption. Built with <strong>PHP, JavaScript, and MySQL</strong>, it empowers users to manage shopping lists, track purchases, and earn badges for eco-friendly actions—all within a modern, mobile-friendly interface.
           </p>
           <h4>Key Features</h4>
           <ul>
@@ -235,7 +235,7 @@ const Projects = () => {
             <h4>Key Features</h4>
             <ul>
               <li>Recursive folder scanning with configurable filters (by size, date, extension).</li>
-              <li>Content-based comparison using checksums to detect true duplicates.</li>
+              <li>Exact-duplicate detection via content checksums, plus visually-similar image detection using perceptual hashing with BK-tree indexing and GPU-accelerated SSIM.</li>
               <li>Interactive results view with preview thumbnails, file paths, and sizes.</li>
               <li>Batch operations include delete, move, or open duplicates directly from the interface.</li>
               <li>Extensible architecture: modular services and view‑models make adding new scan strategies or storage back‑ends easy.</li>
